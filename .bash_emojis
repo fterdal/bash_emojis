@@ -1,0 +1,24 @@
+#!/bin/bash
+# Set an emoji to precede the prompt, depending on the day / time.
+emoji=""	   	# Emoji to display
+dow=$(date +%u) # Day of week (Monday is 1, Tuesday is 2, etc...)
+h=`date +%H`   	# Hour of the day
+# nighttime = 0 - 6
+# morning = 6 - 12
+# afternoon = 12 - 18
+# weekend = Saturday, Sunday
+# evening = 18 - 24
+if [ $h -ge 0 ] && [ $h -lt 6 ]; then		# It's nighttime!
+	emoji="🌒 💤"
+elif [ $h -ge 6 ] && [ $h -lt 12 ]; then	# It's morning!
+	emoji="🍳 ☕️"
+elif [ $h -ge 12 ] && [ $h -lt 18 ]; then	# It's afternoon!
+    emoji="👔 🚀"
+elif [ $dow = 6 ] || [ $dow = 7 ]; then		# It's a weekend!
+	emoji="🍕 🍻"
+else										# It's evening!
+	emoji="🍿 📺"
+fi
+PS1="\u:\W $emoji  $ "
+
+
