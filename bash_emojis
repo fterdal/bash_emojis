@@ -1,5 +1,4 @@
-#!/bin/bash
-# Set an emoji to precede the prompt, depending on the day / time.
+# Set a pair of emojis to precede the prompt, depending on the day / time.
 emoji=""	   	# Emoji to display
 dow=$(date +%u) # Day of week (Monday is 1, Tuesday is 2, etc...)
 h=`date +%H`   	# Hour of the day
