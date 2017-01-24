@@ -10,7 +10,7 @@ Move this repository to your home directory (~), and add the following line to y
 ~/.profile:
 
 ```bash
-source ~/.bash_custom/bash_emojis
+source ~/bash_emojis/bash_emojis
 ```
 
 ## Install - Option 2
