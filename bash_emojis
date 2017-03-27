@@ -18,6 +18,6 @@ elif [ $h -ge 12 ] && [ $h -lt 18 ]; then	# It's afternoon!
 else										# It's evening!
 	emoji="🍿 📺"
 fi
-PS1="\u:\W$emoji $ "
+PS1="\W$emoji  "
 
 
